@@ -1,7 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import cors from 'cors';
-import { db } from "./db";
+import coursesRouter from './courses'
 
 const app = express();
 
@@ -9,15 +9,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.get("/courses", async (req, res) => {
-    try{
-        const courses = await db.course.findMany();
-        res.status(200).json(courses);
-    } catch (e) {
-        res.status(500).json({ error: "Internal error"})
-    }
-    
-})
+app.use("/courses", coursesRouter);
 
 const {PORT} = process.env;
 app.listen( PORT, () => {
