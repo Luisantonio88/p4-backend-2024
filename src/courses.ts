@@ -4,15 +4,7 @@ import { send } from "./response";
 import { z } from "zod";
 import { catchErrors } from "./errors";
 
-const router = Router();
-
-/*
-GET     /courses/
-POST    /courses/
-GET     /courses/:id
-PUT     /courses/:id
-DELETE  /courses/:id
-*/
+const coursesRouter = Router();
 
 const idParamSchema = z.object({
   id: z.coerce.number(),
@@ -22,7 +14,7 @@ const courseBodySchema = z.object({
   name: z.string().min(5).max(200),
 });
 
-router.get(
+coursesRouter.get(
   "/",
   catchErrors(async (req, res) => {
     const courses = await db.course.findMany();
@@ -30,7 +22,7 @@ router.get(
   })
 );
 
-router.get(
+coursesRouter.get(
   "/:id",
   catchErrors(async (req, res) => {
     const { id: courseId } = idParamSchema.parse(req.params);
@@ -39,7 +31,7 @@ router.get(
   })
 );
 
-router.post(
+coursesRouter.post(
   "/",
   catchErrors(async (req, res) => {
     const data = courseBodySchema.parse(req.body);
@@ -48,7 +40,7 @@ router.post(
   })
 );
 
-router.put(
+coursesRouter.put(
   "/:id",
   catchErrors(async (req, res) => {
     const { id: courseId } = idParamSchema.parse(req.params);
@@ -63,7 +55,7 @@ router.put(
   })
 );
 
-router.delete(
+coursesRouter.delete(
   "/:id",
   catchErrors(async (req, res) => {
     const { id: courseId } = idParamSchema.parse(req.params);
@@ -74,4 +66,4 @@ router.delete(
   })
 );
 
-export default router;
+export default coursesRouter;

@@ -1,3 +1,30 @@
+Luis Antonio Castro
+
+1. bun install
+2. bunx prisma db push
+3. bunx prisma db seed (5 usuarios, 5 cursos, y 5 lecciones)
+4. bun run dev
+5. Endpoints con ThunderClient
+
+COURSES:
+Get All Courses
+Get One Course
+Add New Course
+Update One Course
+Delete One Course
+USERS:
+Get All Users
+Get One User
+Add New User
+Update One User
+Delete One User
+LESSONS:
+Get All Lessons
+Get One Lesson
+Add New Lesson
+Update One Lesson
+Delete One Lesson
+
 # Backend en Typescript, Express y Prisma
 
 Se trata de hacer un _backend_ usando Typescript, Express y Prisma. El _backend_ implementado en clase es el modelo a seguir. Para alumnos que lo hacen por primera vez y sienten algo de incomodidad, lo ideal es usar el modelo de guía y hacer un _backend_ cercano al original de tal manera que la práctica sea un repaso a fondo. Para los que estén más cómodos, lo ideal es innovar en algun aspecto y salirse parcialmente del modelo en ciertos momentos o explorar algún interés personal. El modelo de datos es directamente la práctica anterior.
@@ -7,11 +34,13 @@ Al usar Prisma, es quizás buena idea explorar proveedores de Prisma que no sean
 ## Entregable
 
 Como anteriormente, para hacer esta práctica hay que:
+
 - Hacer un _fork_ de este repositorio.
 - Trabajar en el _fork_ haciendo commits regularmente (una práctica que aparece entera en un solo commit tendrá una nota muy baja o cero, hay que mostrar todo el proceso intermedio).
 - Al finalizar, se debe crear un `ZIP` del repositorio (que incluya el fichero `.env`!) y entregarlo en el [Campus Online de UPC School](https://talent.upc.edu) (habrá una tarea preparada para ello).
 
 El entregable es el código del proyecto, incluyendo:
+
 - `docker-compose.yml` si la base de datos corre bajo Docker.
 - El código completo del servidor.
 - Un fichero exportado de [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) con la lista de _endpoints_ que se han probado. (Esto es **extremadamente** relevante porque la corrección del backend, de no tener este fichero, es un trabajo muchísimo más tedioso!).
