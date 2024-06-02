@@ -1,0 +1,226 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "API",
+    "collectionId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+    "dateExported": "2024-06-02T14:27:34.222Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6a9c5c6a-acbb-48ae-8aa8-c9d78ffa1ab4",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Get All Courses",
+            "url": "/courses",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-01T15:50:01.130Z",
+            "modified": "2024-06-01T15:50:09.196Z",
+            "headers": []
+        },
+        {
+            "_id": "6f193097-1c5e-498a-b384-f0f0769b2f13",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Get One Course",
+            "url": "/courses/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-06-02T09:27:58.426Z",
+            "modified": "2024-06-02T09:55:51.788Z",
+            "headers": []
+        },
+        {
+            "_id": "8dae26d5-4501-4d21-9b3c-6c79a668fe3e",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Add New Course",
+            "url": "/courses",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-06-01T16:41:34.847Z",
+            "modified": "2024-06-02T14:14:13.866Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Art history\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6442cfa4-5f31-4920-a6a5-7287923552b8",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Update One Course",
+            "url": "/courses/5",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-06-02T09:14:38.062Z",
+            "modified": "2024-06-02T14:15:03.153Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Padel\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d45c417a-fbef-4dd9-9b36-5075af7c8c93",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Delete One Course",
+            "url": "/courses/6",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-06-02T10:01:16.841Z",
+            "modified": "2024-06-02T14:16:23.933Z",
+            "headers": []
+        },
+        {
+            "_id": "2eba227d-fb18-4bc4-b9bb-a10b0528b9fb",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Get All Users",
+            "url": "/users",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-06-02T13:39:22.463Z",
+            "modified": "2024-06-02T13:42:17.044Z",
+            "headers": []
+        },
+        {
+            "_id": "826243b7-f1e2-4df1-9764-642b5285d8d8",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Get One User",
+            "url": "/users/1",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-06-02T13:42:35.508Z",
+            "modified": "2024-06-02T13:42:57.812Z",
+            "headers": []
+        },
+        {
+            "_id": "73bd309c-7783-4494-9980-bbc36d44fd8b",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Add New User",
+            "url": "/users",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-06-02T13:43:26.173Z",
+            "modified": "2024-06-02T13:44:25.377Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nick\": \"LukaMagic\",\n  \"fullName\": \"Luka Doncic\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a8cbdf51-d1e1-4e00-a6ed-a8a813bc15d0",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Update One User",
+            "url": "/users/3",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2024-06-02T13:44:58.813Z",
+            "modified": "2024-06-02T13:46:24.875Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nick\": \"Nole!\",\n  \"fullName\": \"Novak Djokovic\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "786f53ad-1016-4036-b390-27bb562b84cf",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Delete One User",
+            "url": "/users/6",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2024-06-02T13:46:57.890Z",
+            "modified": "2024-06-02T14:17:03.682Z",
+            "headers": []
+        },
+        {
+            "_id": "64ddc779-0e5e-4545-aee9-8c468f078dcc",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Get All Lessons",
+            "url": "/lessons",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2024-06-02T13:54:38.417Z",
+            "modified": "2024-06-02T13:54:59.566Z",
+            "headers": []
+        },
+        {
+            "_id": "34cdc960-d42f-47ea-b4bd-5231fd8ab9a6",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Get One Lesson",
+            "url": "/lessons/2",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-06-02T13:57:49.357Z",
+            "modified": "2024-06-02T13:58:03.501Z",
+            "headers": []
+        },
+        {
+            "_id": "8f03666f-3ff5-4dab-ab41-3b00fc953e04",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Add One Lesson",
+            "url": "/lessons",
+            "method": "POST",
+            "sortNum": 161250,
+            "created": "2024-06-02T14:01:09.785Z",
+            "modified": "2024-06-02T14:17:27.445Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text\": \"Lesson 101\",\n  \"courseId\": 1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c63449fd-8839-4fc3-a438-d4fb359ba347",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Update One Lesson",
+            "url": "/lessons/1",
+            "method": "PUT",
+            "sortNum": 162500,
+            "created": "2024-06-02T14:06:57.635Z",
+            "modified": "2024-06-02T14:08:55.881Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text\": \"Updated lesson content\",\n  \"courseId\": 1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7efec140-2784-4afe-b99a-d6e42804e8b7",
+            "colId": "390ca553-a0ba-4e65-af20-d0467c18d125",
+            "containerId": "",
+            "name": "Delete Lesson",
+            "url": "/lessons/1",
+            "method": "DELETE",
+            "sortNum": 170000,
+            "created": "2024-06-02T13:59:11.799Z",
+            "modified": "2024-06-02T13:59:21.884Z",
+            "headers": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:8888"
+        }
+    },
+    "ref": "eMzIM06RQDZml5MR8VBYdbwtNzoYzB9WR16tB7iD1Hdtb5DEvfZv9_Zv9lu_obmy-8-edTR9k896t6dszOAG_w"
+}
