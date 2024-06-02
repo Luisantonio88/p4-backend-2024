@@ -21,39 +21,36 @@ const courseBodySchema = z.object({
   name: z.string().min(5).max(200),
 });
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
   try {
     const courses = await db.course.findMany();
     send(res).ok(courses);
   } catch (e) {
-    send(res).internalError("Could not get forum.");
+    next(e);
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", async (req, res, next) => {
   try {
     const { id: courseId } = idParamSchema.parse(req.params);
     const course = await db.course.findUniqueOrThrow({ where: { courseId } });
     send(res).ok({ course });
   } catch (e: any) {
-    if (e.name === "NotFoundError") {
-      return send(res).notFound();
-    }
-    send(res).internalError("Internal Error");
+    next(e);
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, next) => {
   try {
     const data = courseBodySchema.parse(req.body);
     const course = await db.course.create({ data });
     send(res).createOk(course);
   } catch (e) {
-    send(res).internalError("Couldn't create forum.");
+    next(e);
   }
 });
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", async (req, res, next) => {
   try {
     const { id: courseId } = idParamSchema.parse(req.params);
     const courseData = courseBodySchema.parse(req.body);
@@ -62,7 +59,11 @@ router.put("/:id", async (req, res) => {
       where: { courseId },
       data: courseData,
     });
-  } catch (e) {}
+
+    send(res).ok(updateCourse);
+  } catch (e) {
+    next(e);
+  }
 });
 
 export default router;
